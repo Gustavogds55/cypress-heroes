@@ -20,8 +20,8 @@ describe('Botoes Dashboard', () => {
     logoutButton: 'nav > .flex > :nth-child(2) > .undefined',
     assertButtonLogin: ':nth-child(1) > .mb-2',
     buttonDashboards: 'button',
-    modalAlert:'.text-lg'
-    
+    modalAlert:'.text-lg',
+    numFans: '.block'
 
   }
     beforeEach(() => {
@@ -44,7 +44,22 @@ describe('Botoes Dashboard', () => {
 
   })
 
-  it.only('Funcionalidade LIKE', () => {
+  it('Funcionalidade LIKE', () => {
+
+    let valorInicialLike: number ;
+
+    cy.get(selectorsList.numFans).eq(1)
+    .invoke('text')
+    .then(text => {
+
+      valorInicialLike = parseInt(text, 10);
+  })
+    .then(() => {
+    cy.get(selectorsList.buttonDashboards).eq(2).click();
+  })
+    .then(() => {
+    cy.get(selectorsList.numFans).eq(1).should('have.text', `${valorInicialLike + 1}`);
+  })
 
   })
 
