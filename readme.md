@@ -3,6 +3,15 @@
 I created end-to-end (E2E) and component tests, validating user interactions and critical application flows to ensure everything works as expected.  
 The goal is to demonstrate how to structure and execute automated frontend tests, improving reliability and delivery quality. 🚀
 
+## Tests
+
+All frontend test code is located in the `client` folder:
+
+- **E2E tests** – validate complete user flows  
+- **Component tests** – ensure individual UI elements behave correctly  
+
+Tests are implemented with **Cypress**, demonstrating best practices in frontend test automation.
+
 This is a demo application that shows how to use Cypress to run end-to-end,
 component, and API tests against an application.
 
