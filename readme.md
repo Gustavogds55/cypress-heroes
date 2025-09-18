@@ -1,4 +1,7 @@
-# Cypress Heroes Demo Application
+# Web automation with cy.heroes
+
+I created end-to-end (E2E) and component tests, validating user interactions and critical application flows to ensure everything works as expected.  
+The goal is to demonstrate how to structure and execute automated frontend tests, improving reliability and delivery quality. 🚀
 
 This is a demo application that shows how to use Cypress to run end-to-end,
 component, and API tests against an application.
@@ -7,6 +10,7 @@ component, and API tests against an application.
 
 The app is a mono repo that uses npm workspaces. Once you clone the project,
 install the dependencies at the root folder:
+
 
 ```sh
 npm install
@@ -27,29 +31,6 @@ npm run dev
 
 This will start both the client and server apps in dev mode. The site will be
 available at http://localhost:3000.
-
-## App Overview
-
-The Cypress Heroes app consists of a frontend client app written in React that
-uses Vite, as well as a backend app that uses NestJS.
-
-### React Client App
-
-The React client app is located in the **client** folder. It is a standard React [Vite](https://vitejs.dev/) app.
-
-Todo: fill out
-
-### NestJS Server App
-
-The server app is in the **server** folder. It is built with the [NestJS](https://nestjs.com/) Node.js framework. It uses [Prisma](https://www.prisma.io/) for the database ORM.
-
-#### Database seeding and resetting
-
-The database is seeded from the **server/prisma/seed.ts** script when you set up the app. If at any time you want to reset the database back to its initial state, run:
-
-```sh
-npm run resetdb
-```
 
 ## Environment Variables
 
