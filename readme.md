@@ -41,6 +41,40 @@ npm run dev
 This will start both the client and server apps in dev mode. The site will be
 available at http://localhost:3000.
 
+## ▶️ Running the Tests
+
+To execute the Cypress tests, follow the steps below:
+
+### Open Cypress Test Runner (interactive mode)
+```bash
+npx cypress open
+````
+
+
+## 🛠 Technologies Used
+
+- [Cypress]
+- [Node.js]
+- [TypeScript]
+- [GitHub]
+
+## 📂 Project Structure
+
+All test files are located in the `client` folder:
+
+## 📊 Test Scenarios
+
+Below are the test scenarios designed for this project.  
+They were organized in spreadsheets to provide a clear view of the coverage, expected results, and validation steps.  
+
+The following images illustrate the test scenarios used during the automation process:
+
+![alt text](image.png)
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+
 ## Environment Variables
 
 The client app uses an environment variable to know what the URL is for the
