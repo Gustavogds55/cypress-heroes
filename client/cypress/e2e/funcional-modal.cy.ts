@@ -20,7 +20,13 @@ describe('Funcionalidades MODAL', () => {
     logoutButton: 'nav > .flex > :nth-child(2) > .undefined',
     assertButtonLogin: ':nth-child(1) > .mb-2',
     buttonDashboards: 'button',
-    modalAlert:'.text-lg'
+    modalAlert:'.text-lg',
+    modalDinheiroYes:'.gap-2 > .text-white',
+    excluirHeroEdit: '.bg-red-600',
+    excluirHeroEditNo:'.gap-2 > .text-gray-800',
+    excluirHeroEditYes: '.gap-2 > .text-white',
+    modalQuestion:'.modal-container > .open'
+
     
   }
     
@@ -33,15 +39,24 @@ describe('Funcionalidades MODAL', () => {
     cy.get(selectorsList.assertNewHero).should('contain.text','Create New Hero')
 
   })
-  it('Editar Heroi com dados validos', () => {
+  it('Modal Dinheiro', () => {
+    cy.get(selectorsList.buttonDashboards).eq(3).click()
+    cy.get(selectorsList.modalQuestion).should('be.visible')
+
+  
+  })
+  it('Modal Excluir', () => {
+    cy.get(selectorsList.buttonDashboards).eq(5).click()
+    cy.get(selectorsList.modalQuestion).should('be.visible')
+
+  
+  })
+  it('Modal DELETE HERO em edit', () => {
     cy.get(selectorsList.buttonDashboards).eq(4).click()
-    cy.get(selectorsList.nameHeroi).clear().type('Feiticeira')
-    cy.get(selectorsList.priceHeroes).clear().type('500')
-    cy.get(selectorsList.fasHeroes).clear().type('4000')
-    cy.get(selectorsList.savesHeroes).clear().type('444')
-    cy.get(selectorsList.selectPowers).select('4')
-    cy.contains(selectorsList.submitButton).click()
-    cy.get(selectorsList.assertNewHero).should('contain.text','Create New Hero')
+    cy.get(selectorsList.excluirHeroEdit).click()
+    cy.get(selectorsList.modalQuestion).should('be.visible')
+
+
 
   })
 
